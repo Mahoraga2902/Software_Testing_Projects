@@ -1,0 +1,58 @@
+Test_Case_ID,Test_Scenario,Test_Steps,Expected_Result,Actual_Result,Status
+TC_001,Verify Addition Operation Works ,"1.Enter 10 in ""First number"" field
+2.Enter 5 in ""Second number"" field
+3. Choose operation as ""Add""
+4.Choose ""Integer only"" option
+5. Click ""Calculate"" button",15,105,Fail
+TC_002,"Verify Addition Operation should not work if one of the input field is a string when ""Integer only"" option is not selected","1.Enter 10 in ""First number"" field
+2.Enter ""Lobo"" in ""Second number"" field
+3. Choose operation as ""Add""
+4. Do not Choose ""Integer only"" option
+5. Click ""Calculate"" button",Error message saying one of the field is not a number,10 Lobo,Fail
+TC_003,"Verify Addition Operation should not work if one of the input field is a string when ""Integer only"" option is selected","1.Enter 10 in ""First number"" field
+2.Enter ""Lobo"" in ""Second number"" field
+3. Choose operation as ""Add""
+4. Choose ""Integer only"" option
+5. Click ""Calculate"" button",Error message saying one of the field is not a number,10,Fail
+TC_004,Verify Subtraction Operation Works ,"1.Enter 10 in ""First number"" field
+2.Enter 5 in ""Second number"" field
+3. Choose operation as ""Subtract""
+4.Choose ""Integer only"" option
+5. Click ""Calculate"" button",5,5,Pass
+TC_005,"Verify Subtraction Operation should not work if one of the input field is a string when ""Integer only"" option is not selected","1.Enter 10 in ""First number"" field
+2.Enter 5 in ""Second number"" field
+3. Choose operation as ""Subtract""
+4. Do Not Choose ""Integer only"" option
+5. Click ""Calculate"" button",Error message saying one of the field is not a number,Error message saying one of the field is not a number,Pass
+TC_006,Verify Multiplication Operation Works ,"1.Enter 10 in ""First number"" field
+2.Enter 5 in ""Second number"" field
+3. Choose operation as ""Multiply""
+4.Choose ""Integer only"" option
+5. Click ""Calculate"" button",50,50,Pass
+TC_007,Verify Division Operation Works ,"1.Enter 10 in ""First number"" field
+2.Enter 5 in ""Second number"" field
+3. Choose operation as ""Divide""
+4.Choose ""Integer only"" option
+5. Click ""Calculate"" button",2,2,Pass
+TC_008,Verify Division Operation Works when First number is 0,"1.Enter 0 in ""First number"" field
+2.Enter 5 in ""Second number"" field
+3. Choose operation as ""Divide""
+4.Choose ""Integer only"" option
+5. Click ""Calculate"" button",0,0,Pass
+TC_009,Verify Division Operation Works when Second number is 0,"1.Enter 10 in ""First number"" field
+2.Enter 0 in ""Second number"" field
+3. Choose operation as ""Divide""
+4.Choose ""Integer only"" option
+5. Click ""Calculate"" button",Error Message,Error Message,Pass
+TC_010,Verify Concatenation Operation Works On Numbers ,"1.Enter 10 in ""First number"" field
+2.Enter 5 in ""Second number"" field
+3. Choose operation as ""Concatenate""
+5. Click ""Calculate"" button",105,15,Fail
+TC_011,Verify Concatenation Operation Works On Strings,"1.Enter ""Mark"" in ""First number"" field
+2.Enter ""Lobo"" in ""Second number"" field
+3. Choose operation as ""Concatenate""
+4. Click ""Calculate"" button",MarkLobo,"Error message saying the field ""First number/Second number"" is not a number",Fail
+TC_012,Verify Concatenation Operation Works On Strings With Spaces ,"1.Enter ""Mark "" in ""First number"" field
+2.Enter ""Lobo"" in ""Second number"" field
+3. Choose operation as ""Concatenate""
+4. Click ""Calculate"" button",Mark Lobo,"Error message saying the field ""First number/Second number"" is not a number",Fail
